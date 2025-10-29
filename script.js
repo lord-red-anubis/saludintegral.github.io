@@ -172,34 +172,65 @@ window.addEventListener("load", () => {
   mostrarSaludo();
 });
 
-// ==== CERRAR SESIÓN ====
-const logoutBtn = document.getElementById("logoutBtn");
 
-function actualizarLogoutBtn() {
-  const user = JSON.parse(localStorage.getItem("user"));
-  if (user && user.name) {
-    logoutBtn.style.display = "inline-block";
-  } else {
-    logoutBtn.style.display = "none";
+document.addEventListener("DOMContentLoaded", () => {
+  const userGreeting = document.getElementById("user-greeting");
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
+
+  // Mostrar saludo si hay usuario guardado
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+  if (storedUser && storedUser.name) {
+    mostrarSaludo(storedUser.name);
   }
-}
 
-if (logoutBtn) {
-  logoutBtn.addEventListener("click", () => {
-    if (confirm("¿Deseas cerrar tu sesión?")) {
-      localStorage.removeItem("user");
-      document.getElementById("perfilForm")?.reset();
-      document.getElementById("user-greeting").textContent = "";
-      logoutBtn.style.display = "none";
-      alert("👋 Sesión cerrada correctamente.");
+  // Registro de usuario
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("nombreRegistro").value.trim();
+    const email = document.getElementById("emailRegistro").value.trim();
+    const password = document.getElementById("passRegistro").value.trim();
+
+    if (name && email && password) {
+      const user = { name, email, password };
+      localStorage.setItem("user", JSON.stringify(user));
+      mostrarSaludo(name);
+      alert("Registro exitoso. ¡Bienvenido, " + name + "!");
     }
   });
-}
 
-window.addEventListener("load", () => {
-  mostrarSaludo();
-  cargarPerfil();
-  actualizarLogoutBtn();
+  // Inicio de sesión
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("emailLogin").value.trim();
+    const password = document.getElementById("passLogin").value.trim();
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+      mostrarSaludo(storedUser.name);
+      alert("Inicio de sesión exitoso. ¡Hola, " + storedUser.name + "!");
+    } else {
+      alert("Correo o contraseña incorrectos.");
+    }
+  });
+
+  // Mostrar saludo y botón de cerrar sesión
+  function mostrarSaludo(nombre) {
+    userGreeting.innerHTML = `
+      <span>Hola, ${nombre}</span>
+      <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+    `;
+    document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
+  }
+
+  // Cerrar sesión
+  function cerrarSesion() {
+    localStorage.removeItem("user");
+    userGreeting.innerHTML = "";
+    alert("Has cerrado sesión correctamente.");
+  }
 });
+
+
 
 

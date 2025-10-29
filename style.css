@@ -1,0 +1,783 @@
+/* ==================== RESET Y BASE ==================== */
+body {
+    margin: 0;
+    font-family: "DM Serif Text", serif;
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+main {
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.section h2 {
+    color: #2c7be5;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    background: #089173;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==== MENÚ RESPONSIVE ==== */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Modo móvil */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #056c57;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ==================== SECCIÓN INICIO ==================== */
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    gap: 40px;
+    background: #f8f9fa;
+    flex-wrap: wrap;
+}
+
+.inicio-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.inicio-texto h2 {
+    color: #2c7be5;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.inicio-texto h2 span {
+    color: #089173;
+}
+
+.inicio-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.inicio-texto .btn {
+    display: inline-block;
+    background-color: #089173;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.inicio-texto .btn:hover {
+    background-color: #056c57;
+}
+
+/* Vista móvil */
+@media (max-width: 768px) {
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inicio-imagen {
+        text-align: center;
+    }
+}
+
+/* ==================== REGISTRO Y LOGIN ==================== */
+.acceso {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.form-col {
+    flex: 1;
+    min-width: 320px;
+}
+
+.form-col h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c7be5;
+}
+
+/* Marco elegante */
+.marco-form {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid #2c7be5;
+    background: linear-gradient(145deg, #ffffff, #f3f7ff);
+    box-shadow: 0 8px 20px rgba(44, 123, 229, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marco-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(44, 123, 229, 0.3);
+}
+
+.marco-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.6rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.marco-form input:focus {
+    border-color: #2c7be5;
+    box-shadow: 0 0 6px rgba(44, 123, 229, 0.3);
+    outline: none;
+}
+
+.marco-form button {
+    width: 100%;
+    padding: 0.9rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #2c7be5;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.marco-form button:hover {
+    background: #1a5fc2;
+    transform: scale(1.03);
+}
+
+/* Vista móvil */
+@media (max-width: 768px) {
+    .acceso {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-col {
+        width: 100%;
+    }
+}
+
+/* ==== Carrusel ==== */
+.inicio-carrusel {
+    flex: 1;
+    text-align: right;
+    position: relative;
+    max-width: 520px;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+@keyframes slide {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    25%,
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75%,
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Modo móvil */
+@media (max-width: 768px) {
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .inicio-carrusel {
+        text-align: center;
+        max-width: 100%;
+        height: 250px;
+    }
+}
+
+/* ==== Barra de progreso ==== */
+.progress-container {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 30px;
+    height: 25px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, #089173, #2c7be5);
+    border-radius: 30px;
+    transition: width 0.5s ease;
+}
+
+/* ==== Navegación activa ==== */
+nav a.active {
+    text-decoration: underline;
+    color: #ffd43b;
+}
+
+/* Botón progreso */
+#aumentarProgreso {
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#aumentarProgreso:hover {
+    background-color: #1a5fc2;
+}
+
+/* ==================== TIPS Y ARTÍCULOS ==================== */
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #2c7be5;
+    margin-bottom: 0.5rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #089173;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* ==== SECCIÓN VIDEOS RESPONSIVA ==== */
+.videos {
+    background: linear-gradient(180deg, #f8fafc 0%, #e6f4f1 100%);
+    padding: 80px 8%;
+    border-radius: 20px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.videos h2 {
+    text-align: center;
+    color: #089173;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.videos p {
+    text-align: center;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.video-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    width: 100%;
+    max-width: 420px;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* Mantiene 16:9 */
+    overflow: hidden;
+    border-bottom: 4px solid #089173;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    max-width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-card h3 {
+    padding: 1rem;
+    font-size: 1.05rem;
+    color: #056c57;
+    font-weight: 600;
+    text-align: center;
+    background: #f0fdfa;
+}
+
+/* ==================== PERFIL ==================== */
+#perfil {
+    margin-top: 2rem;
+}
+
+#perfil h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #089173;
+}
+
+/* Ajustes de accesibilidad: mejor contraste */
+body {
+    background-color: #f8f9fa;
+    color: #111;
+    /* más oscuro para legibilidad */
+}
+
+button {
+    background-color: #2c7be5;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #1a5fc2;
+}
+
+/* Responsivo multimedia */
+@media (max-width: 768px) {
+    .media-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-box iframe {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* caja responsiva para mantener relación 16:9 */
+.video-box {
+    position: relative;
+    width: 620px;
+    /* ancho base, se adapta por media queries */
+    padding-top: 56.25%;
+    /* 16:9 ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #000;
+    /* fondo por si tarda el iframe en cargar */
+    transition: transform 0.25s ease;
+}
+
+.video-box:hover {
+    transform: translateY(-6px);
+}
+
+/* iframe ocupa todo el contenedor */
+.video-box iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* adaptabilidad: en pantallas pequeñas reduce ancho */
+@media (max-width: 900px) {
+    .video-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 520px) {
+    .video-box {
+        width: 100%;
+        padding-top: 56.25%;
+    }
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: #089173;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ffd43b;
+    text-decoration: none;
+}
+
+/* ==================== MENÚ DESPLEGABLE RESPONSIVO MEJORADO ==================== */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #056c57;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    nav.active {
+        display: flex;
+        animation: fadeInMenu 0.4s ease;
+    }
+
+    @keyframes fadeInMenu {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    nav a {
+        display: block;
+        margin: 12px 0;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ==================== PERFIL EDITABLE ==================== */
+.perfil-botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.perfil-botones button {
+    flex: 1;
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.perfil-botones button:hover {
+    background-color: #1a5fc2;
+}
+
+/* ==================== SECCIÓN EXPLORAR MÁS ==================== */
+.explorar {
+    background: linear-gradient(180deg, #f4faf8 0%, #e1f5ee 100%);
+    padding: 80px 8%;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.explorar h2 {
+    color: #089173;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.explorar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.explorar .card {
+    text-align: center;
+    padding: 1.5rem;
+    border: 2px solid #2c7be5;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explorar .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Modal de Artículos ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido {
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    height: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-contenido iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.cerrar {
+    color: #333;
+    align-self: flex-end;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar:hover {
+    color: #e53935;
+}
+
+/* === USER GREETING === */
+.user-greeting {
+    font-size: 1rem;
+    color: #f8f8f8;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* === MENÚ MÓVIL === */
+.menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #00796b;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav a {
+        padding: 15px;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+    }
+}
+
+/* === VIDEOS RESPONSIVE === */
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}

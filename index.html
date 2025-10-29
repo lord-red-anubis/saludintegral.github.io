@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet" />
+  <title>Salud Integral</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/Logo salud1.png" alt="Logo Salud Integral" />
+      <div>
+        <h1>Salud Integral</h1>
+        <p>Bienestar físico, mental y nutricional en un solo lugar</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#inicio" class="active">Inicio</a>
+      <a href="#registro">Registro</a>
+      <a href="#login">Login</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#tips">Tips</a>
+      <a href="#articulos">Artículos</a>
+      <a href="#videos">Videos</a>
+      <a href="#explorar">Explorar más</a>
+    </nav>
+
+    <!-- Botón del menú móvil -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+    
+    <div id="user-greeting" class="user-greeting"></div>
+
+    <!-- Botón de Cerrar Sesión -->
+    <button id="logoutBtn" class="logout-btn" style="display: none;">Cerrar sesión</button>
+    </header>
+
+
+  </header>
+
+  <main>
+    <!-- CARRUSEL DE INICIO -->
+<section id="inicio" class="inicio">
+  <div class="inicio-texto">
+    <h2>Bienvenido a <span>Salud Integral</span></h2>
+    <p>
+      ¡Bienvenido a Salud Integral! Somos tu plataforma confiable y completa para cuidar de tu bienestar. Aquí podrás acceder
+      a una variedad de recursos diseñados para ayudarte a vivir de manera más saludable y equilibrada. Ofrecemos consejos
+      diarios prácticos, artículos elaborados por expertos en salud y bienestar, videos educativos que te motivarán a adoptar
+      hábitos positivos, y recomendaciones personalizadas adaptadas a tus necesidades. Nuestro objetivo es acompañarte en tu
+      camino hacia una vida más plena, activa y saludable. Explora nuestro contenido y comienza hoy mismo a priorizar tu salud
+      y bienestar en cada aspecto de tu vida.
+    </p>
+    <a href="#explorar" class="btn">Explorar más</a>
+  </div>
+
+  <!-- Carrusel en lugar de imagen -->
+  <div class="inicio-carrusel">
+    <div class="carousel">
+        <img src="img/bienestar1.jpg" class="slide active" alt="Salud y bienestar" />
+        <img src="img/265533.webp" class="slide" alt="Alimentación balanceada" />
+        <img src="img/fitness.webp" class="slide" alt="Ejercicio saludable" />
+        <img src="img/OIP (1).jpeg" class="slide" alt="Salud y bienestar" />
+        <img src="img/R (3).jpeg" class="slide" alt="Alimentación balanceada" />
+        <img src="img/OIP.jpeg" class="slide" alt="Ejercicio saludable" />
+    </div>
+  </div>
+</section>
+
+    <!-- FORMULARIOS -->
+    <section id="registro" class="section acceso">
+      <div class="form-col">
+        <h2>Registro de Usuario</h2>
+        <form id="registerForm" class="marco-form">
+          <input type="text" id="nombreRegistro" placeholder="Nombre completo" required />
+          <input type="email" id="emailRegistro" placeholder="Correo electrónico" required />
+          <input type="password" id="passRegistro" placeholder="Contraseña" required />
+          <button type="submit">Registrarse</button>
+        </form>
+      </div>
+
+      <div class="form-col" id="login">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm" class="marco-form">
+          <input type="email" id="emailLogin" placeholder="Correo electrónico" required />
+          <input type="password" id="passLogin" placeholder="Contraseña" required />
+          <button type="submit">Ingresar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- PERFIL -->
+    <section id="perfil" class="section">
+      <h2>Mi Perfil</h2>
+      <form id="perfilForm" class="marco-form">
+        <label for="foto">Foto de perfil:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" />
+    
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+    
+        <label for="intereses">Intereses:</label>
+        <input type="text" id="intereses" name="intereses" placeholder="Salud, ejercicio, alimentación..." />
+    
+        <div class="perfil-botones">
+          <button type="submit">Guardar</button>
+          <button type="button" id="editarPerfil">Editar</button>
+          <button type="button" id="borrarPerfil">Borrar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- TIPS -->
+    <section id="tips" class="section">
+      <h2>Tips diarios</h2>
+      <div class="grid">
+        <div class="card">💧 Bebe suficiente agua: Mantente hidratado bebiendo al menos 8 vasos de agua al día para apoyar
+          funciones corporales y energía.</div>
+        <div class="card">🥗 Come frutas y verduras: Incluye una variedad de colores en tus comidas para obtener vitaminas,
+          minerales y antioxidantes esenciales.</div>
+        <div class="card">🏃‍♂️ Haz ejercicio regularmente: Dedica al menos 30 minutos al día a caminar, correr, bailar o
+          practicar algún deporte que disfrutes.</div>
+        <div class="card">😴 Duerme lo suficiente: Apunta a 7-9 horas de sueño de calidad para recuperarte y mantener tu
+          mente
+          alerta.</div>
+        <div class="card">🌬️ Practica la respiración profunda: Tómate unos minutos para respirar profundamente y reducir el
+          estrés.</div>
+        <div class="card">⏸️ Tómate descansos: Levántate y muévete cada hora si trabajas sentado mucho tiempo para evitar
+          molestias y mejorar la circulación.</div>
+        <div class="card">🍭 Limita el consumo de azúcar y alimentos procesados: Opta por alimentos naturales y evita
+          excesos de
+          azúcares y grasas saturadas.</div>
+        <div class="card">😊 Cultiva pensamientos positivos: Practica la gratitud y enfócate en lo bueno para mejorar tu
+          estado
+          emocional.</div>
+        <div class="card">🌳 Conecta con la naturaleza: Pasea en parques o espacios abiertos para relajarte y revitalizarte.
+        </div>
+        <div class="card">🧼 Practica la higiene personal: Mantén una rutina de higiene para prevenir enfermedades.</div>
+        <div class="card">🎨 Dedica tiempo a tus hobbies: Realiza actividades que disfrutes para reducir el estrés y
+          aumentar tu
+          bienestar.</div>
+        <div class="card">🤝 Mantén relaciones saludables: Dedica tiempo a tus seres queridos y rodéate de personas que te
+          apoyen.</div>
+        <div class="card">🧘‍♂️ Medita o realiza mindfulness: Dedica unos minutos al día para centrarte en el presente y
+          reducir
+          ansiedades.</div>
+        <div class="card">📵 Limita el uso de pantallas antes de dormir: Evita teléfonos y computadoras al menos 30 minutos
+          antes de acostarte para mejorar la calidad del sueño.</div>
+        <div class="card">👂 Escucha a tu cuerpo: Presta atención a las señales de fatiga, hambre o malestar y actúa en
+          consecuencia.</div>
+        <div class="card">🌿 Conecta con la naturaleza: Pasea por parques o áreas verdes para reducir el estrés y revitalizarte.
+        </div>
+        <div class="card">📝 Practica gratitud diaria: Tómate unos minutos para agradecer lo bueno en tu vida y fortalecer tu
+          bienestar emocional.</div>
+        <div class="card">💤 Establece una rutina de sueño: Intenta acostarte y levantarte a la misma hora para mejorar la
+          calidad del descanso.</div>
+      </div>
+    </section>
+
+<!-- ARTÍCULOS -->
+<section id="articulos" class="section">
+  <h2>Artículos de Expertos</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Importancia del sueño</h3>
+      <p>Descubre cómo dormir bien mejora tu salud física y mental.</p>
+      <a href="#" class="leer-mas" data-articulo="sueño"
+        data-link="https://www.onsalus.com/la-importancia-del-sueno-en-la-salud-22639.html">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Nutrición balanceada</h3>
+      <p>Consejos prácticos para mantener una dieta equilibrada.</p>
+      <a href="#" class="leer-mas" data-articulo="nutricion"
+        data-link="https://www.gob.mx/salud/articulos/alimentacion-sana-y-balanceada-para-una-buena-salud">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Ejercicio y productividad</h3>
+      <p>Cómo la actividad física impacta en tu rendimiento diario.</p>
+      <a href="#" class="leer-mas" data-articulo="ejercicio"
+        data-link="https://centralempleos.com/ejercicio-y-productividad-relacion/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Manejo del Estrés</h3>
+      <p>Técnicas efectivas para reducir el estrés y mejorar tu bienestar emocional.</p>
+      <a href="#" class="leer-mas" data-articulo="estres"
+        data-link="https://www.avancepsicologos.com/estres-que-es-tipos-sintomas-tratamiento-como-manejarlo/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Hidratación y Salud</h3>
+      <p>La importancia de mantenerse bien hidratado para optimizar funciones corporales.</p>
+      <a href="#" class="leer-mas" data-articulo="hidratacion"
+        data-link="https://guiamedicavirtual.com/espanol/prevencion-de-enfermedades/hidratacion-y-salud-beneficios/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Salud Mental</h3>
+      <p>Estrategias para fortalecer tu salud mental y afrontar los desafíos diarios.</p>
+      <a href="#" class="leer-mas" data-articulo="salud-mental" data-link="https://www.tuasaude.com/es/salud-mental/">Leer
+        más</a>
+    </div>
+    <div class="card">
+      <h3>Hábitos de Vida Activos</h3>
+      <p>Incorpora pequeñas actividades en tu rutina para mantenerte activo y saludable.</p>
+      <a href="#" class="leer-mas" data-articulo="habitos-vida"
+        data-link="https://elblogdesalud.com/estilos-de-vida-activos-beneficios-ventajas-ideas-tips/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Prevención de Enfermedades</h3>
+      <p>Medidas básicas para protegerte y prevenir enfermedades comunes.</p>
+      <a href="#" class="leer-mas" data-articulo="prevencion"
+        data-link="https://enfermeriaactual.com/prevencion-de-enfermedades/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Meditación y Relajación</h3>
+      <p>Aprende técnicas de meditación para mejorar tu concentración y reducir el estrés.</p>
+      <a href="#" class="leer-mas" data-articulo="meditacion"
+        data-link="https://concepto.de/meditacion/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Ejercicios para mejorar la postura</h3>
+      <p>Consejos y rutinas para mantener una postura saludable y evitar molestias.</p>
+      <a href="#" class="leer-mas" data-articulo="postura"
+        data-link="https://mejorconsalud.as.com/bienestar/buenos-habitos/7-ejercicios-ayudaran-mejorar-tu-postura-corporal/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Alimentación para la energía</h3>
+      <p>Recomendaciones alimenticias para mantenerte activo y con energía durante todo el día.</p>
+      <a href="#" class="leer-mas" data-articulo="energia"
+        data-link="https://www.tuasaude.com/es/alimentos-energeticos/">Leer más</a>
+    </div>
+    <div class="card">
+      <h3>Ejercicios de respiración</h3>
+      <p>Prácticas sencillas para mejorar tu respiración y reducir la ansiedad.</p>
+      <a href="#" class="leer-mas" data-articulo="respiracion"
+        data-link="https://www.psicologia-online.com/ejercicios-de-respiracion-diafragmatica-5048.html">Leer más</a>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="section videos">
+  <h2>🎥 Videos Recomendados de Salud Integral</h2>
+  <p>Explora videos sobre bienestar físico, nutrición y salud mental para complementar tu aprendizaje.</p>
+
+  <div class="video-grid">
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/q12mV3CN0JU?si=aiuYhS3g3Fvm4-Bc"
+          title="Ejercicios para principiantes" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h3>Rutina básica para principiantes</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/z6X5oEIg6Ak" title="Consejos de nutrición" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Consejos de alimentación saludable</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/tYwnSBkc_To?si=PgO-hoRfJoDraTzT" title="Meditación guiada"
+          frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h3>Meditación guiada para reducir el estrés</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/1b1Eo4se11o?si=tmB3jsBS-uxIjZ9w" title="Ejercicios de estiramiento" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Ejercicios de estiramiento matutino</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/f6LoHbrzVq4?si=TpHpJ9rA_bdDK0ci" title="Recetas saludables" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Recetas fáciles y saludables</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/FU4OTllcOXM?si=kqXHw_WSY1FNtqdM" title="Yoga para principiantes" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Yoga para reducir el estrés</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/Unnvetjp0lk?si=5TfmMrxO-EweTQxS" title="Consejos para dormir mejor" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Tips para mejorar tu sueño</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/ksi-c8YgClY?si=QvConMd1B-t6wwto" title="Ejercicios de cardio" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Rutina de cardio en casa</h3>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/Hq0rXl9UI4A?si=RTUdrlgB7mybuTGR" title="Técnicas de relajación" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Técnicas de relajación para el día a día</h3>
+    </div>
+  </div>
+</section>
+
+
+<!--EXPLORAR MÁS-->
+<section id="explorar" class="section explorar">
+  <h2>Explora Más Recursos</h2>
+  <p>Encuentra herramientas y artículos adicionales sobre salud integral.</p>
+  <div class="explorar-grid">
+    <div class="card">
+      <h3>Guías de Alimentación</h3>
+      <p>Descubre menús saludables y equilibrados para tu día a día.</p>
+      <a href="https://www.gob.mx/salud/prensa/244-guias-alimentarias-herramienta-para-mejorar-nutricion-de-la-poblacion-mexicana?idiom=es" class="btn">Ver Guías</a>
+    </div>
+    <div class="card">
+      <h3>Ejercicios en Casa</h3>
+      <p>Rutinas simples para mantenerte activo sin salir de casa.</p>
+      <a href="https://unibooking.es/content/14-ejercicios-que-puedes-hacer-sin-salir-de-casa?msclkid=dc13a71d67e31dc4515ccfea7d054faf" class="btn">Ver Ejercicios</a>
+    </div>
+    <div class="card">
+      <h3>Bienestar Emocional</h3>
+      <p>Recursos y prácticas para fortalecer tu salud mental y emocional.</p>
+      <a href="https://albamarpsicologia.com/bienestar-emocional-como-mejorarlo/" class="btn">Ver Recursos</a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal para artículos -->
+<div id="modal-articulo" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <iframe src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+  <footer>
+    <p>© 2025 Salud Integral | <a href="#">Aviso de privacidad</a> | <a href="#">Contacto</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
